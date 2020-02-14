@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             
-            @foreach ($products as $product )
+            @forelse ($products as $product )
                 <div class="col-4">
                     
                         <div class="card">
@@ -35,9 +35,16 @@
                     
                 </div>
                 </div>
-            @endforeach
+            @empty 
+                <h1>NO RESULT!</h1>
+
+            @endforelse
                     
+             @forelse ($collection as $item)
+                 
              
+                 
+             @endforelse
         </div>
     </div>
 
